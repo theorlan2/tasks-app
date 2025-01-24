@@ -1,11 +1,92 @@
-# React + TypeScript + Vite
+# Task Managment App
+<img src="/resources/tasks-app.png">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="/resources/home-app.png">
 
-Currently, two official plugins are available:
+This Task Managment App project is built using [Vite.js](https://vite.dev/) and provide a user-friendly platform for managing tasks efficiently.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+
+The project follows a standard React/TypeScript structure with the following directories:
+
+```
+src/
+├── assets          # Application-wide assets (images, icons, etc.)
+├── components      # Reusable UI components
+│   ├── form       # Form-related components
+│   ├── layout     # Layout components for page structure
+│   └── shared     # Shared utilities and components
+├── hooks           # Custom React hooks
+├── pages           # Main application pages
+│   ├── list        # List functionality pages
+│   │   └── components  # List components
+│   └── tasks       # Task management pages
+│       └── components  # Task components
+├── store           # Redux-based state management
+│   └── features    # Feature modules for state management
+│       ├── api     # API-related reducers and actions
+│       ├── tasks    # Task-related reducers and actions
+│       └── user     # User-related reducers and actions
+├── __tests__      # Unit and integration tests
+│   ├── list        # Tests for list functionality
+│   │   └── __snapshots__  # Snapshot files for tests
+│   └── tasks       # Tests for task functionality
+│       └── __snapshots__  # Snapshot files for tests
+├── types           # TypeScript type definitions
+│   ├── shared      # Shared types across the application
+│   ├── task        # Task-specific types
+│   └── user        # User-specific types
+└── utils          # Utility functions and helpers
+│   └── tests       # Test utilities
+│
+└── App.tsx         # Routes configuration
+└── main.tsx        # Root application
+
+```
+
+
+## Getting Started Frontend
+
+Now run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+You can start editing the page by modifying `src/pages/home`.
+
+## Running Tests and Test Coverage Analysis
+
+To run the tests, you can use `jest` with the following command:
+
+```bash
+npm test
+# or
+yarn test
+# or
+pnpm test
+```
+
+To generate the test coverage report, use this command:
+
+```bash
+npx jest --coverage
+# or
+yarn test:coverage
+# or
+pnpm test:coverage
+```
+
+Open `coverage/lcov-report/index.html` in your browser to view the code coverage report.
+
 
 ## Expanding the ESLint configuration
 
@@ -25,8 +106,8 @@ export default tseslint.config({
 })
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Replace `tseslint.configs.recommended` to `tslint.configs.recommendedTypeChecked` or `tslint.configs.strictTypeChecked`
+- Optionally add `...tslint.configs.stylisticTypeChecked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
 ```js
@@ -47,4 +128,5 @@ export default tseslint.config({
     ...react.configs['jsx-runtime'].rules,
   },
 })
+```
 ```
