@@ -1,10 +1,11 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-
-import type { Task } from "@/types/task/task.model";
-import TaskItem from "@/pages/taks/components/TaskItem";
-import { TaskStatusEnum } from "@/types/task/task.enum";
 import userEvent from "@testing-library/user-event";
+
+import TaskItem from "../../src/pages/taks/components/TaskItem";
+
+import type { Task } from "../../src/types/task/task.model";
+import { TaskStatusEnum } from "../../src/types/task/task.enum";
 
 const mockTask: Task = {
   id: "1",

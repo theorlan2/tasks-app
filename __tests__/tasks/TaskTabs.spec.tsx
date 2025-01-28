@@ -1,28 +1,34 @@
+import React from "react";
 import { describe, expect, it, vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { TaskStatusEnum } from "@/types/task/task.enum";
-import TasksTabs from "@/pages/taks/components/TasksTabs";
-import useFilterTaskByStatus from "@/hooks/useFilterTaskByStatus";
-import { Task } from "@/types/task/task.model";
+import useFilterTaskByStatus from "../../src/hooks/useFilterTaskByStatus";
+
+import TasksTabs from "../../src/pages/taks/components/TasksTabs";
+
+import { TaskStatusEnum } from "../../src/types/task/task.enum";
+import { Task } from "../../src/types/task/task.model";
 
 describe("TasksTabs", () => {
   const mockTask1 = {
     id: "1",
     title: "Test Task 1",
+    description: "Description Task 1",
     status: TaskStatusEnum.TODO,
   } as Task;
 
   const mockTask2 = {
     id: "2",
     title: "Test Task 2",
+    description: "Description Task 2",
     status: TaskStatusEnum.PROGRESS,
   } as Task;
 
   const mockTask3 = {
     id: "3",
     title: "Test Task 3",
+    description: "Description Task 3",
     status: TaskStatusEnum.DONE,
   } as Task;
 

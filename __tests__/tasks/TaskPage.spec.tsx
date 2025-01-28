@@ -1,9 +1,10 @@
+import React from "react";
 import { fireEvent, waitFor } from "@testing-library/react";
-
-import { renderWithProviders } from "@/utils/tests/StoreProviderToTest";
-
 import { describe, expect, it } from "vitest";
-import TasksPage from "@/pages/taks/TasksPage";
+
+import { renderWithProviders } from "../../src/utils/tests/StoreProviderToTest";
+
+import TasksPage from "../../src/pages/taks/TasksPage";
 
 describe("Tasks page", () => {
   it("Render the page", () => {

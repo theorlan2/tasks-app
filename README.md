@@ -27,11 +27,6 @@ src/
 │       ├── api     # API-related reducers and actions
 │       ├── tasks    # Task-related reducers and actions
 │       └── user     # User-related reducers and actions
-├── __tests__      # Unit and integration tests
-│   ├── list        # Tests for list functionality
-│   │   └── __snapshots__  # Snapshot files for tests
-│   └── tasks       # Tests for task functionality
-│       └── __snapshots__  # Snapshot files for tests
 ├── types           # TypeScript type definitions
 │   ├── shared      # Shared types across the application
 │   ├── task        # Task-specific types
@@ -41,6 +36,12 @@ src/
 │
 └── App.tsx         # Routes configuration
 └── main.tsx        # Root application
+
+ __tests__/      # Unit and integration tests
+│   ├── list        # Tests for list functionality
+│   │   └── __snapshots__  # Snapshot files for tests
+│   └── tasks       # Tests for task functionality
+│       └── __snapshots__  # Snapshot files for tests
 
 ```
 

@@ -1,9 +1,10 @@
+import React from "react";
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
 
-import { UserI } from "@/types/user/user.model";
+import { UserI } from "../../src/types/user/user.model";
 
-import ListItem from "@/pages/list/components/ListItem";
+import ListItem from "../../src/pages/list/components/ListItem";
 
 describe("ListItem Component", () => {
   const mockUser: UserI = {

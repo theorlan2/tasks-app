@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router";
 import { describe, it, expect, beforeEach } from "vitest";
 import { render } from "@testing-library/react";
 
-import HomePage from "@/pages/Home";
+import HomePage from "../src/pages/Home";
 
 describe("HomePage", () => {
   let container: HTMLElement;

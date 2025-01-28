@@ -3,10 +3,10 @@ import { describe, expect, it, vi } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import TaskForm from "@/pages/taks/components/TaskForm";
+import TaskForm from "../../src/pages/taks/components/TaskForm";
 
-import { Task } from "@/types/task/task.model";
-import { TaskStatusEnum } from "@/types/task/task.enum";
+import { Task } from "../../src/types/task/task.model";
+import { TaskStatusEnum } from "../../src/types/task/task.enum";
 
 describe("TaskForm", () => {
   const onSubmitMock = vi.fn();

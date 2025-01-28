@@ -5,10 +5,10 @@ import { MemoryRouter } from "react-router";
 import { waitFor } from "@testing-library/react";
 import { http, HttpResponse } from "msw";
 
-import { renderWithProviders } from "@/utils/tests/StoreProviderToTest";
-import { server } from "@/utils/tests/mswSetup";
+import { renderWithProviders } from "../../src/utils/tests/StoreProviderToTest";
+import { server } from "../../src/utils/tests/mswSetup";
 
-import ListUsersPage from "@/pages/list/ListUsersPage";
+import ListUsersPage from "../../src/pages/list/ListUsersPage";
 
 describe("ListUsersPage", () => {
   it("Before the fetches ", async () => {
